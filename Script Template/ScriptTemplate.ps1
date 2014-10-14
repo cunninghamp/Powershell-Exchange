@@ -3,38 +3,32 @@
 SCRIPTNAME.ps1
 
 .DESCRIPTION 
-
+A description of this script.
 
 .OUTPUTS
+What the script's output is
 
+.PARAMETER PARAMETERNAME
+The PARAMETERNAME parameter does something.
 
-.PARAMETER
-
-
-.PARAMETER
-
-
-.PARAMETER
-
+.PARAMETER Log
+Used to generate a log file for the script.
 
 .EXAMPLE
-
-
-.EXAMPLE
-
+.\ScriptTemplate.ps1
 
 .EXAMPLE
-
+.\ScriptTemplate.ps1 -Log
 
 .LINK
-
+https://
 
 .NOTES
 Written by: Paul Cunningham
 
 Find me on:
 
-* Blog:		http://paulcunningham.me
+* My Blog:	http://paulcunningham.me
 * Twitter:	https://twitter.com/paulcunningham
 * LinkedIn:	http://au.linkedin.com/in/cunninghamp/
 * Github:	https://github.com/cunninghamp
@@ -65,8 +59,11 @@ param (
 # Variables
 #...................................
 
-$scriptname = $MyInvocation.ScriptName
+$scriptname = $MyInvocation.MyCommand.Name
 $now = Get-Date
+
+$myDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+$logfile = "$myDir\$scriptname.log"
 
 
 #...................................
@@ -75,6 +72,7 @@ $now = Get-Date
 
 $logstring0 = "====================================="
 $logstring1 = " $scriptname"
+
 
 #...................................
 # Initialization Strings
@@ -150,3 +148,19 @@ if (!(Get-ADServerSettings).ViewEntireForest)
 #...................................
 # Script
 #...................................
+
+
+
+
+
+#...................................
+# End
+#...................................
+
+if ($Log) {
+	$timestamp = Get-Date -DisplayHint Time
+	"$timestamp $logstring0" | Out-File $logfile
+	Write-Logfile $logstring1
+	Write-Logfile "  $now"
+	Write-Logfile $logstring0
+}
