@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+  <Configuration version="1.0">
+  <Feature Name="MailboxProvisioning" Cmdlets="New-Mailbox,Enable-Mailbox">
+  <ApiCall Name="OnComplete">
+  If ($succeeded)
+  {
+  	#Set-ADServerSettings -EntireForest:$true
+    $Name= $provisioningHandler.UserSpecifiedParameters["Name"]
+	$mailbox = Get-Mailbox $Name
+    Set-CASMailbox $mailbox -ActiveSyncEnabled $false
+    Set-Mailbox $mailbox -AuditEnabled:$true
+  }
+  </ApiCall>
+  </Feature>
+  </Configuration>
