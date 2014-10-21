@@ -159,7 +159,7 @@ if (!(Get-ADServerSettings).ViewEntireForest)
 
 if ($Log) {
 	$timestamp = Get-Date -DisplayHint Time
-	"$timestamp $logstring0" | Out-File $logfile
+	"$timestamp $logstring0" | Out-File $logfile -Append
 	Write-Logfile $logstring1
 	Write-Logfile "  $now"
 	Write-Logfile $logstring0
