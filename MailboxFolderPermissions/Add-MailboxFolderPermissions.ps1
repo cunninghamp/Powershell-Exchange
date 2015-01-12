@@ -120,7 +120,14 @@ foreach ($mailboxfolder in $mailboxfolders)
     }
     $identity = "$($mailbox):$folder"
     Write-Host "Adding $user to $identity with $access permissions"
-    Add-MailboxFolderPermission -Identity $identity -User $user -AccessRights $Access -ErrorAction SilentlyContinue
+    try
+    {
+        Add-MailboxFolderPermission -Identity $identity -User $user -AccessRights $Access -ErrorAction STOP
+    }
+    catch
+    {
+        Write-Warning $_.Exception.Message
+    }
 }
 
 
