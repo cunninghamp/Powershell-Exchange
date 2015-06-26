@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-Get-ADInfo.ps1 - PowerShell sript to collect Active Directory information
+Get-ADInfo.ps1 - PowerShell script to collect Active Directory information
 
 .DESCRIPTION 
 This PowerShell Script collects some basic information about an Active Directory
