@@ -8,7 +8,7 @@ environment that is useful for verifying the pre-requisites for an Exchange
 Server deployment or upgrade.
 
 .OUTPUTS
-Results are output to the console and to a txt file.
+Results are output to the console and to a HTML file.
 
 .EXAMPLE
 .\Get-ADInfo.ps1
