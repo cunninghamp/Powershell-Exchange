@@ -66,8 +66,8 @@ $forestinfo  | Add-Member NoteProperty -Name "Schema Master" -Value $($forest.Sc
 Write-Host "Domain Naming Master: $($forest.DomainNamingMaster)"
 $forestinfo  | Add-Member NoteProperty -Name "Domain Naming Master" -Value $($forest.DomainNamingMaster)
 
-Write-Host "UPN Suffixes: $($forest.UPNSuffixes)"
-$forestinfo  | Add-Member NoteProperty -Name "UPN Suffixes" -Value $($forest.UPNSuffixes)
+Write-Host "Additional UPN Suffixes: $($forest.UPNSuffixes)"
+$forestinfo  | Add-Member NoteProperty -Name "Additional UPN Suffixes" -Value $($forest.UPNSuffixes)
 
 $htmlbody += $forestinfo | ConvertTo-Html -Fragment
 $htmlbody += $spacer
