@@ -191,7 +191,7 @@ $ETConfigPaths | Out-File $outputfile_paths -Append
 
 #Mailbox Transport
 
-$mailboxtransport = @(Get-MailboxTransportService SVR-EXCH08 | Select *logpath*)
+$mailboxtransport = @(Get-MailboxTransportService $server | Select *logpath*)
 
 $names = @($mailboxtransport | Get-Member | Where {$_.membertype -eq "NoteProperty"})
 
@@ -238,7 +238,7 @@ foreach ($name in $names) {$mailboxtransport.($name.Name).PathName | Out-File $o
 
 #FE Transport
 
-$fetransport = @(Get-FrontEndTransportService SVR-EXCH08 | Select *logpath*)
+$fetransport = @(Get-FrontEndTransportService $server | Select *logpath*)
 
 $names = @($fetransport | Get-Member | Where {$_.membertype -eq "NoteProperty"})
 
@@ -302,8 +302,8 @@ foreach ($name in $names) {$fetransport.($name.Name).PathName | Out-File $output
 ### File Extension Exclusions ###
 
 # Start the file type exclusions text file
-"### Antivirus exclusion etensions for $server ###" | Out-File $outputfile_extensions
-"" | Out-File $outputfile_procs -Append
+"### Antivirus exclusion extensions for $server ###" | Out-File $outputfile_extensions
+"" | Out-File $outputfile_extensions -Append
 
 ".config" | Out-File $outputfile_extensions -Append
 ".dia" | Out-File $outputfile_extensions -Append
