@@ -16,14 +16,13 @@ apply the same exclusions to all servers that have the same configuration. If yo
 software has a policy-based administration console then that can make the configuration
 of multiple servers more efficient.
 
+Run the script locally on the server you wish to generate the exclusions list for.
+
 .OUTPUTS
 Results are output to text files.
 
-.PARAMETER Server
-The server to generate antivirus exclusions for.
-
 .EXAMPLE
-.\Get-Exchange2013AVExclusions.ps1 -Server EX2013SRV1
+.\Get-Exchange2013AVExclusions.ps1
 
 .NOTES
 Written by: Paul Cunningham
@@ -47,11 +46,6 @@ V1.00, 21/7/2015 - Initial version
 
 #requires -version 2
 
-[CmdletBinding()]
-param (
-	[Parameter( Mandatory=$true)]
-	[String]$Server
-	)
 
 #...................................
 # Variables
@@ -62,6 +56,8 @@ param (
 # exclusion fails, or in case a path changes later when the server is
 # reconfigured.
 #
+
+$server = $ENV:ComputerName
 
 #This text file lists the file and folder paths to exclude from antivirus scanning.
 $outputfile_paths = "av-exclusions-$($server)-paths.txt"
