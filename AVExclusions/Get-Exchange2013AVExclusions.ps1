@@ -16,7 +16,8 @@ apply the same exclusions to all servers that have the same configuration. If yo
 software has a policy-based administration console then that can make the configuration
 of multiple servers more efficient.
 
-Run the script locally on the server you wish to generate the exclusions list for.
+Run the script in the Exchange Management Shell locally on the server you wish to generate
+the exclusions list for.
 
 .OUTPUTS
 Results are output to text files.
