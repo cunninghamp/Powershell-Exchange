@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-Test-TransportServerBP.ps1 - Script to check Transport Servers for Back Pressure.
+Test-TransportServerBackPressure.ps1 - Script to check Transport Servers for Back Pressure.
 
 .DESCRIPTION 
 Checks the event logs of Hub Transport servers for "back pressure" events.
@@ -12,20 +12,31 @@ Results are output to the PowerShell window.
 Perform a check of a single server
 
 .EXAMPLE
-.\Test-TransportServerBP.ps1
+.\Test-TransportServerBackPressure.ps1
 Checks all Hub Transport servers in the organization and outputs the results to the shell window.
 
 .EXAMPLE
-.\Test-TransportServerBP.ps1 -server HO-EX2010-MB1
+.\Test-TransportServerBackPressure.ps1 -server HO-EX2010-MB1
 Checks the server HO-EX2010-MB1 and outputs the results to the shell window.
 
 .LINK
 http://exchangeserverpro.com/powershell-script-check-hub-transport-servers-for-back-pressure-events
 
 .NOTES
-Written By: Paul Cunningham
-Website:	http://exchangeserverpro.com
-Twitter:	http://twitter.com/exchservpro
+Written by: Paul Cunningham
+
+Find me on:
+
+* My Blog:	http://paulcunningham.me
+* Twitter:	https://twitter.com/paulcunningham
+* LinkedIn:	http://au.linkedin.com/in/cunninghamp/
+* Github:	https://github.com/cunninghamp
+
+For more Exchange Server tips, tricks and news
+check out Exchange Server Pro.
+
+* Website:	http://exchangeserverpro.com
+* Twitter:	http://twitter.com/exchservpro
 
 Change Log
 V1.0, 27/08/2012 - Initial version
