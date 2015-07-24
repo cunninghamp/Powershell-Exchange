@@ -1,17 +1,17 @@
-#Test-TransportServerBP.ps1 - Script to check Transport Servers for Back Pressure
+#Test-TransportServerBackPressure.ps1 - Script to check Transport Servers for Back Pressure
 
 Checks the event logs of Hub Transport servers for "back pressure" events. Results are output to the PowerShell window.
 
 ##Usage
 
 ```
-.\Test-TransportServerBP.ps1
+.\Test-TransportServerBackPressure.ps1
 ```
 
 Checks all Hub Transport servers in the organization and outputs the results to the shell window.
 
 ```
-.\Test-TransportServerBP.ps1 -server HO-EX2010-MB1
+.\Test-TransportServerBackPressure.ps1 -server HO-EX2010-MB1
 ```
 
 Checks the server HO-EX2010-MB1 and outputs the results to the shell window.
