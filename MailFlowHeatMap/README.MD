@@ -7,7 +7,7 @@ Generates a HTML report of the mail flow latency between mailbox servers in the 
 PS C:\Scripts> .\MailFlowHeatMap.ps1
 ```
 
-Generates the mail flow heat map file. See **example.html** in this repo for an example of what the report looks like.
+Generates the mail flow heat map file. See **example.jpg** in this repo for an example of what the report looks like.
 
 More info: http://exchangeserverpro.com/create-exchange-mail-flow-latency-heat-map-powershell
 
