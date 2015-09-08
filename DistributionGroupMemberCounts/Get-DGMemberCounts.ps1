@@ -76,7 +76,7 @@ $distgroups = @(Get-DistributionGroup -ResultSize Unlimited)
 #Process each distribution group
 foreach ($dg in $distgroups)
 {
-    $count = (Get-ADGroupMember -Recursive $dg.DistinguishedName).Count
+    $count = @(Get-ADGroupMember -Recursive $dg.DistinguishedName).Count
 
     $reportObj = New-Object PSObject
     $reportObj | Add-Member NoteProperty -Name "Group Name" -Value $dg.Name
