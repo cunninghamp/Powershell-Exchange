@@ -35,6 +35,7 @@ check out Exchange Server Pro.
 Change Log
 V1.00, 11/03/2014 - Initial Version
 V1.01, 26/08/2015 - Minor update
+V1.02, 03/11/2016 - Changed values from GB to MB for accuracy
 #>
 
 #requires -version 2
@@ -85,11 +86,11 @@ if ($mbxdatabases)
         {
             if (($database."$quota").IsUnlimited -eq $true)
             {
-                $mbxreportObj | Add-Member NoteProperty -Name "$quota (GB)" -Value "Unlimited"
+                $mbxreportObj | Add-Member NoteProperty -Name "$quota (MB)" -Value "Unlimited"
             }
             else
             {
-                $mbxreportObj | Add-Member NoteProperty -Name "$quota (GB)" -Value $($database."$quota").Value.ToGB()
+                $mbxreportObj | Add-Member NoteProperty -Name "$quota (MB)" -Value $($database."$quota").Value.ToMB()
             }
         }
     
@@ -117,11 +118,11 @@ if ($pfdatabases)
         {
             if (($database."$quota").IsUnlimited -eq $true)
             {
-                $pfreportObj | Add-Member NoteProperty -Name "$quota (GB)" -Value "Unlimited"
+                $pfreportObj | Add-Member NoteProperty -Name "$quota (MB)" -Value "Unlimited"
             }
             else
             {
-                $pfreportObj | Add-Member NoteProperty -Name "$quota (GB)" -Value $($database."$quota").Value.ToGB()
+                $pfreportObj | Add-Member NoteProperty -Name "$quota (MB)" -Value $($database."$quota").Value.ToMB()
             }
         }
     
