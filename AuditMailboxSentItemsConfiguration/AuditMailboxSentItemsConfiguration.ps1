@@ -24,12 +24,14 @@ Generates a report for all mailboxes on the specified database.
 http://exchangeserverpro.com/powershell-script-audit-mailbox-sent-items-configurations
 
 .NOTES
-Written By: Paul Cunningham
-Website:	http://exchangeserverpro.com
-Twitter:	http://twitter.com/exchservpro
+Written by: Paul Cunningham
 
-Change Log
-V1.00, 10/04/2014, Initial version
+Find me on:
+
+* My Blog:	https://paulcunningham.me
+* Twitter:	https://twitter.com/paulcunningham
+* LinkedIn:	https://au.linkedin.com/in/cunninghamp/
+* Github:	https://github.com/cunninghamp
 #>
 
 [CmdletBinding()]
