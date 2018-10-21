@@ -1,11 +1,11 @@
-#Get-ADInfo.ps1 - PowerShell script to collect Active Directory information
+# Get-ADInfo.ps1 - PowerShell script to collect Active Directory information
 
 This PowerShell Script collects some basic information about an Active Directory environment that is useful for verifying the pre-requisites for an Exchange
 Server deployment or upgrade.
 
 Results are output to the console and to a HTML file.
 
-##Example
+## Example
 
 ```
 .\Get-ADInfo.ps1
@@ -38,17 +38,14 @@ DataCenter1, Windows Server 2012 R2 Datacenter     1
 ```
 
 
-##Credits
+## Credits
 Written by: Paul Cunningham
 
 Find me on:
 
-* My Blog:	http://paulcunningham.me
+* My Blog:	https://paulcunningham.me
 * Twitter:	https://twitter.com/paulcunningham
-* LinkedIn:	http://au.linkedin.com/in/cunninghamp/
+* LinkedIn:	https://au.linkedin.com/in/cunninghamp/
 * Github:	https://github.com/cunninghamp
 
-For more Exchange Server tips, tricks and news check out Exchange Server Pro.
-
-* Website:	http://exchangeserverpro.com
-* Twitter:	http://twitter.com/exchservpro
+Check out my [books](https://paulcunningham.me/books/) and [courses](https://paulcunningham.me/training/) to learn more about Office 365 and Exchange Server.
