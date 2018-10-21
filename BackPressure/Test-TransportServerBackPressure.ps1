@@ -27,19 +27,10 @@ Written by: Paul Cunningham
 
 Find me on:
 
-* My Blog:	http://paulcunningham.me
+* My Blog:	https://paulcunningham.me
 * Twitter:	https://twitter.com/paulcunningham
-* LinkedIn:	http://au.linkedin.com/in/cunninghamp/
+* LinkedIn:	https://au.linkedin.com/in/cunninghamp/
 * Github:	https://github.com/cunninghamp
-
-For more Exchange Server tips, tricks and news
-check out Exchange Server Pro.
-
-* Website:	http://exchangeserverpro.com
-* Twitter:	http://twitter.com/exchservpro
-
-Change Log
-V1.0, 27/08/2012 - Initial version
 #>
 
 #requires -version 2
@@ -86,7 +77,7 @@ else
 #Check each server
 foreach($server in $servers)
 {
-	$events = @(Invoke-Command –Computername $server –ScriptBlock { Get-EventLog -LogName Application | Where-Object {$_.Source -eq "MSExchangeTransport" -and $_.Category -eq "ResourceManager"} })
+	$events = @(Invoke-Command â€“Computername $server â€“ScriptBlock { Get-EventLog -LogName Application | Where-Object {$_.Source -eq "MSExchangeTransport" -and $_.Category -eq "ResourceManager"} })
 	$count = $events.count
 
 	if ($count -lt 1)
