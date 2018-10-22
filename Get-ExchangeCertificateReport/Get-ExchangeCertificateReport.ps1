@@ -16,9 +16,14 @@ Reports SSL certificates for Exchange Server 2010 servers and outputs to a HTML 
 http://exchangeserverpro.com/powershell-script-ssl-certificate-report
 
 .NOTES
-Written By: Paul Cunningham
-Website:	http://exchangeserverpro.com
-Twitter:	http://twitter.com/exchservpro
+Written by: Paul Cunningham
+
+Find me on:
+
+* My Blog:	https://paulcunningham.me
+* Twitter:	https://twitter.com/paulcunningham
+* LinkedIn:	https://au.linkedin.com/in/cunninghamp/
+* Github:	https://github.com/cunninghamp
 
 Change Log
 V1.00, 13/03/2014 - Initial Version
